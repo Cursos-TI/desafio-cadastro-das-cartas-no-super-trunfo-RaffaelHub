@@ -6,22 +6,28 @@
 
 int main() {
 
+                     // Declarações de variaveis
+    
 
-    // Declarações de variaveis
+    
     char estado1, estado2;
     char codigo_carta1[4], codigo_carta2[4], cidade1[10], cidade2[10];
     int populacao1, populacao2, ponto_turistico1, ponto_turistico2;
     float area1, area2, pib1, pib2;
 
+   
 
-    // Apresentação do jogo
 
+                        // Apresentação do jogo
+    
+    
     printf("---------- BEM VINDO! ---------- \n");
     printf("Esse é o jogo de cartas, trunfo! \n");
 
+ 
     
-    // Solicitando os dados do cadastro ao usuario, PRIMEIRA CARTA
-
+        // Solicitando os dados do cadastro ao usuario, PRIMEIRA CARTA
+    
     printf("Digite uma letra de 'A' a 'H': ");
     scanf(" %c", &estado1);
     printf("Digite o codigo da carta, exemplo(A01): ");
@@ -36,14 +42,22 @@ int main() {
     scanf("%f", &pib1);
     printf("Digite o número de Pontos Turísticos: ");
     scanf("%d", &ponto_turistico1); 
+   
 
-    // Informação de uma continuação
-    
+
+
+
+        // Informação de uma continuação
+   
     printf("-------------------------------------------- \n");
     printf("Ótimo, vamos para a segunda carta, JOGADO!!! \n");
+    
 
-    // Cadastro da SEGUNDA CARTA
 
+
+
+         // Cadastro da SEGUNDA CARTA
+    
     printf("Digite uma letra de 'A' a 'H': ");
     scanf(" %c", &estado2);
     printf("Digite o codigo da carta, exemplo(A01): ");
@@ -58,12 +72,18 @@ int main() {
     scanf("%f", &pib2);
     printf("Digite o número de pontos turisticos: ");
     scanf("%d", &ponto_turistico2);
+  
 
-    // Visualização das cartas registradas
+
+
+        // Visualização das cartas registradas
 
     printf("-------------------------------------------------\n");
     printf("Agora vamos visualizar as informações das cartas:\n");
     printf("-------------------------------------------------\n");
+
+
+
 
     // SAIDA DA PRIMERA CARTA, Vamos imprimir os dados que o jogador colocou na carta de número 1
 
@@ -77,7 +97,10 @@ int main() {
     printf("PONTOS TURISTICOS: %d \n", ponto_turistico1);
     printf("-------------------------------------------------\n");
 
-    // SAIDA DA SEGNDA CARTA, Agora a segunda carta
+
+
+
+    // SAIDA DA SEGUNDA CARTA, Agora a segunda carta
 
     printf("CARTA 2 \n");
     printf("ESTADO: %c \n", estado2);
@@ -88,6 +111,7 @@ int main() {
     printf("PIB: %.2f \n", pib2);
     printf("PONTOS TURISTICOS: %d \n", ponto_turistico2);
     printf("-------------------------------------------------\n");
+
 
 
     
