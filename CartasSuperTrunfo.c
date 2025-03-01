@@ -11,7 +11,7 @@ int main() {
 
     
     char estado1, estado2;
-    char codigo_carta1[4], codigo_carta2[4], cidade1[10], cidade2[10];
+    char codigo_carta1[4], codigo_carta2[4], cidade1[30], cidade2[30];
     int populacao1, populacao2, ponto_turistico1, ponto_turistico2;
     float area1, area2, pib1, pib2;
 
@@ -30,17 +30,17 @@ int main() {
     
     printf("Digite uma letra de 'A' a 'H': ");
     scanf(" %c", &estado1);
-    printf("Digite o codigo da carta, exemplo(A01): ");
+    printf("Digite o código da carta (exemplo: A01): ");
     scanf("%s", codigo_carta1); // não usei o &(pointer) nas variaveis que tem array, segunda minhas pesquisas, não precisa.
-    printf("Digite o nome da cidade: ");
+    printf("Digite o nome da cidade (Sem espaços): ");
     scanf("%s", cidade1);
-    printf("Digite a quantidade da população: ");
+    printf("Digite a quantidade de habitantes da cidade: ");
     scanf("%d", &populacao1);
-    printf("Digite A área da cidade (quilômetros quadrados): ");
+    printf("Digite A área da cidade (em quilômetros quadrados): ");
     scanf("%f", &area1);
-    printf("Digite o PIB(Produto Interno Bruto da cidade): ");
+    printf("Digite o PIB(Produto Interno Bruto) da cidade: ");
     scanf("%f", &pib1);
-    printf("Digite o número de Pontos Turísticos: ");
+    printf("Digite o número de Pontos Turísticos da cidade: ");
     scanf("%d", &ponto_turistico1); 
    
 
@@ -51,6 +51,7 @@ int main() {
    
     printf("-------------------------------------------- \n");
     printf("Ótimo, vamos para a segunda carta, JOGADO!!! \n");
+    printf("-------------------------------------------- \n");
     
 
 
@@ -60,17 +61,17 @@ int main() {
     
     printf("Digite uma letra de 'A' a 'H': ");
     scanf(" %c", &estado2);
-    printf("Digite o codigo da carta, exemplo(A01): ");
+    printf("Digite o código da carta (exemplo: A01): ");
     scanf("%s", codigo_carta2);
-    printf("Digite o nome da cidade: ");
+    printf("Digite o nome da cidade (Sem espaços): ");
     scanf("%s", cidade2);
-    printf("Digite a quantidade da população: ");
+    printf("Digite a quantidade de habitantes da cidade: ");
     scanf("%d", &populacao2);
-    printf("Digite a área da cidade (quilômetros quadrados): ");
+    printf("Digite a área da cidade (em quilômetros quadrados): ");
     scanf("%f", &area2);
-    printf("Digite o PIB(Produto Interno Bruto da cidade): ");
+    printf("Digite o PIB(Produto Interno Bruto) da cidade: ");
     scanf("%f", &pib2);
-    printf("Digite o número de pontos turisticos: ");
+    printf("Digite o número de pontos turisticos da cidade: ");
     scanf("%d", &ponto_turistico2);
   
 
