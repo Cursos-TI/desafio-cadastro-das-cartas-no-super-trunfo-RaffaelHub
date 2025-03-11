@@ -53,9 +53,9 @@ int main() {
         // Informação de uma continuação
    
     printf("-------------------------------------------- \n");
-    sleep(1);
+    sleep(0.5);
     printf("Ótimo, vamos para a segunda carta, JOGADO!!! \n");
-    sleep(1);
+    sleep(0.5);
     printf("-------------------------------------------- \n");
     
 
@@ -63,7 +63,7 @@ int main() {
 
 
          // Cadastro da SEGUNDA CARTA
-    sleep(1);
+    sleep(0.5);
     printf("Digite uma letra de 'A' a 'H': ");
     scanf(" %c", &estado2); // Armazena o estado da carta de 'A' a 'H'
     printf("Digite o código da carta (exemplo: A01): ");
@@ -96,16 +96,16 @@ int main() {
         // Visualização das cartas registradas
 
     printf("-------------------------------------------------\n");
-    sleep(1);
+    sleep(0.5);
     printf("Agora vamos visualizar as informações das cartas:\n");
-    sleep(1);
+    sleep(0.5);
     printf("-------------------------------------------------\n");
 
 
 
 
     // SAIDA DA PRIMERA CARTA, Vamos imprimir os dados que o jogador colocou na carta de número 1
-    sleep(1);
+    sleep(0.5);
     printf("CARTA 1 \n");
     printf("ESTADO: %c \n", estado1);
     printf("CÓDIGO: %s \n", codigo_carta1);
@@ -120,7 +120,7 @@ int main() {
     printf("-------------------------------------------------\n");
 
 
-    sleep(5);
+    sleep(0.5);
 
     // SAIDA DA SEGUNDA CARTA, Agora a segunda carta
 
@@ -135,24 +135,24 @@ int main() {
     printf("Densidade Populacional: %.2f hab/km² \n", densidade_populacional2);
     printf("PIB per capita: %.2f reais \n", pib_per_capita2);
     printf("-------------------------------------------------\n");
-    sleep(2);
+    sleep(0.5);
     // comparação das cartas
     printf("Muito bom, jogador!, vamos analisar as cartas: \n");
-    sleep(4);
+    sleep(0.5);
     printf("População: %s \n", (populacao1 > populacao2) ? "Carta 1 Venceu (1)" : (populacao1 < populacao2) ? "Carta 2 Venceu! (0)" : "Empate");
-    sleep(1.7);
+    
     printf("Área: %s \n", (area1 > area2)? "Carta 1 Venceu! (1)" : (area1 < area2)? "Carta 2 Venceu! (0)" : "Empate");
-    sleep(1.7);
+    
     printf("PIB: %s  \n", (pib1 > pib2)? "Carta 1 Venceu! (1)" : (pib1 < pib2)? "Carta 2 Venceu! (0)" : "Empate");
-    sleep(1.7);
+    
     printf("Pontos turisticos: %s \n", (ponto_turistico1 > ponto_turistico2 )? "Carta 1 venceu! (1)" : (ponto_turistico1 < ponto_turistico2)? "Carta 2 Venceu! (0)" : "Empate");
-    sleep(1.7);
+    
     printf("Densidade populacional: %s \n", (densidade_populacional1 > densidade_populacional2)? "Carta 1 Venceu! (1)" : (densidade_populacional2 < densidade_populacional1)? "Carta 2 Venceu! (0)": "Empate" );
-    sleep(1.7);
+    
     printf("PIB per capita: %s \n",(pib_per_capita1 > pib_per_capita2)? "Carta 1 Venceu! (1)" : (pib_per_capita1 < pib_per_capita2)? "Carta 2 Venceu! (0)" : "Empate"  );
-    sleep(1.7);
+
     printf("O SUPER_PODER: %s  \n", (super_poder1 > super_poder2)?"Carta 1 Venceu! (1)" : (super_poder1 < super_poder2)? "Carta 2 Venceu (0)" : "Empate" );
-    sleep(1);
+    sleep(0.5);
 
 
 
