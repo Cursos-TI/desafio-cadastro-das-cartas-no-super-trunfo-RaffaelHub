@@ -90,8 +90,8 @@ int main() {
   
 
     // soma de todos atributos mais inverso de densidade
-    super_poder1 = populacao1 + area1 + pib1 + ponto_turistico1 + pib_per_capita1 + (1 / densidade_populacional1);
-    super_poder2 = populacao2 + area2 + pib2 + ponto_turistico2 + pib_per_capita2 + (1 / densidade_populacional2);
+    super_poder1 = (float) populacao1 + area1 + pib1 + ponto_turistico1 + pib_per_capita1 + (1 / densidade_populacional1);
+    super_poder2 = (float) populacao2 + area2 + pib2 + ponto_turistico2 + pib_per_capita2 + (1 / densidade_populacional2);
 
         // Visualização das cartas registradas
 
@@ -138,7 +138,7 @@ int main() {
     sleep(2);
     // comparação das cartas
     printf("Muito bom, jogador!, vamos analisar as cartas: \n");
-    sleep(5);
+    sleep(4);
     printf("População: %s \n", (populacao1 > populacao2) ? "Carta 1 Venceu (1)" : (populacao1 < populacao2) ? "Carta 2 Venceu! (0)" : "Empate");
     sleep(1.7);
     printf("Área: %s \n", (area1 > area2)? "Carta 1 Venceu! (1)" : (area1 < area2)? "Carta 2 Venceu! (0)" : "Empate");
