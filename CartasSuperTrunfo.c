@@ -82,9 +82,20 @@ int main() {
 
     
     // Calculo da densidade populacional e PIB per capita
+    if (area1 != 0){
+        densidade_populacional1 = populacao1 / area1;
+    }
+    else{
+        densidade_populacional1 = 0;
+    }
+    if (area2 != 0){
+        densidade_populacional2 = populacao2 / area2;
+    }
+    else{
+    densidade_populacional2 = 0;
+    }
 
-    densidade_populacional1 = populacao1 / area1;
-    densidade_populacional2 = populacao2 / area2;
+    
     pib_per_capita1 = pib1 / populacao1;
     pib_per_capita2 = pib2 / populacao2;
 
@@ -172,7 +183,7 @@ int main() {
             printf("### Carta 1 Venceu ###\n");
         }
         else{
-            printf("Carta 1 - Área(%f) vs Carta 2 - Área(%f) \n", area1, area2);
+            printf("Carta 1 - Área(%.2f) vs Carta 2 - Área(%.2f) \n", area1, area2);
             printf("### Carta 2 Venceu ###\n");
         }
         break;
@@ -186,7 +197,7 @@ int main() {
             printf("### Carta 1 Venceu ###\n");
         }
         else{
-            printf("Carta 1 - PIB(%f) vs Carta 2 - PIB(%f) \n", pib1, pib2);
+            printf("Carta 1 - PIB(%.2f) vs Carta 2 - PIB(%.2f) \n", pib1, pib2);
             printf("### Carta 2 Venceu ###\n");
         }
         break;
@@ -206,7 +217,7 @@ int main() {
         break;
     case 5:
         if (densidade_populacional1 == densidade_populacional2) {
-            printf("Carta 1 - PIB(%.2f) vs Carta 2 - PIB(%.2f) \n", densidade_populacional1, densidade_populacional2);
+            printf("Carta 1 - Densidade Populacional(%.2f) vs Carta 2 - Densidade Populacional(%.2f) \n", densidade_populacional1, densidade_populacional2);
             printf("### EMPATE ###\n");
         }
         else if (densidade_populacional1 > densidade_populacional2){
