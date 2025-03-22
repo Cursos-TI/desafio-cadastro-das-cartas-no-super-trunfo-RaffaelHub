@@ -13,7 +13,7 @@ int main() {
     
     char estado1, estado2;
     char codigo_carta1[4], codigo_carta2[4], cidade1[30], cidade2[30], carta1[10] = "Carta1", carta2[10] = "Carta2";
-    int ponto_turistico1, ponto_turistico2, comparacao,opcao,atributo1,atributo2,resultado1,resultado2, resultado_final1, resultado_final2;
+    int ponto_turistico1, ponto_turistico2, comparacao,opcao,atributo1,atributo1d,atributo2d,atributo2,resultado1,resultado2, resultado_final1, resultado_final2;
     unsigned long int populacao1, populacao2;
     float area1, area2, pib1, pib2, densidade_populacional1, densidade_populacional2, pib_per_capita1;
     float pib_per_capita2, super_poder1, super_poder2;
@@ -337,7 +337,7 @@ int main() {
             resultado1 = ponto_turistico1;
             break;
         case 5:
-            resultado1 = densidade_populacional1;
+            atributo1d = densidade_populacional1;
             break;
         case 6:
             resultado1 = pib_per_capita1;
@@ -364,7 +364,7 @@ int main() {
             resultado2 = ponto_turistico2;
             break;
         case 5:
-            resultado2 = densidade_populacional2;
+            atributo2d = densidade_populacional2;
             break;
         case 6:
             resultado2 = pib_per_capita2;
@@ -375,16 +375,43 @@ int main() {
 
             printf("Ótimo, vamos ver quais atributos ganharam!\n");
 
+            if ((atributo1 != 5 && atributo2 != 5) && (resultado1 == resultado2)) {
+                printf("Empate! (1:1)\n");
+            }
+            else if ((atributo1 != 5 && atributo2 != 5) && (resultado1 != resultado2)) {
+                if (resultado1 > resultado2) {
+                    printf("Você venceu! (1:0)\n");
+                } else {
+                    printf("Você perdeu! (0:1)\n");
+                }
+            } 
+            else if (atributo1 == 5 && atributo2 == 5) { // Comparação de Densidade Populacional
+                if (atributo1d == atributo2d) {
+                    printf("Empate na Densidade Populacional! (1:1)\n");
+                } else if (atributo1d < atributo2d) { // Menor valor vence
+                    printf("Você venceu! (1:0)\n");
+                } else {
+                    printf("Você perdeu! (0:1)\n");
+                }
+            } 
+            else if (atributo1 == 5 || atributo2 == 5) { // Caso um atributo seja Densidade Populacional
+                if (atributo1 == 5) { // Atributo 1 é Densidade Populacional
+                    if (atributo1d < resultado2) { // Menor valor vence
+                        printf("Você venceu! (1:0)\n");
+                    } else {
+                        printf("Você perdeu! (0:1)\n");
+                    }
+                } else { // Atributo 2 é Densidade Populacional
+                    if (resultado1 < atributo2d) { // Menor valor vence
+                        printf("Você venceu! (1:0)\n");
+                    } else {
+                        printf("Você perdeu! (0:1)\n");
+                    }
+                }
+            }
+            
 
-            if (resultado1 && resultado2 && resultado1 == resultado2) {
-                printf("Você venceu! (1:1)\n");  // Ambos têm o mesmo valor e são não-zero
-            }
-            else if (resultado1 != resultado2) {
-                printf("Houve um empate! (1:0) ou (0:1)\n");  // Um é diferente do outro
-            }
-            else {
-                printf("Você perdeu! (0:0)\n");  // Ambos são zero
-            }
+            
         
             break;
         default:
