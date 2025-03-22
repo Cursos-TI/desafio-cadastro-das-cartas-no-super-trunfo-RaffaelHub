@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <unistd.h> // para utilizar o sleep(), assim o codigo fica mais charmoso
+#include <unistd.h> // para utilizar o sleep()
 // Não usei o fgets, por pedido do professor, já que é para ser uma estrutura simples.
 // Grande gama de comentarios, para o melhor entendimento.
 
@@ -315,6 +315,8 @@ int main() {
             }
     
             break;
+
+        // comparação de dois atributos    
         case 2:
         printf("---Vamos faze as comparação--- \n");
         printf("Digite o primeiro atributo\n");
@@ -322,6 +324,7 @@ int main() {
         scanf("%d", &atributo1);
         printf("-------------------------------------------------\n");
         
+        // jogando o valor das variaveis da carta para o resultado
         switch(atributo1)
         {
         case 1:
@@ -364,7 +367,7 @@ int main() {
             resultado2 = ponto_turistico2;
             break;
         case 5:
-            atributo2d = densidade_populacional2;
+            atributo2d = densidade_populacional2; // precisei criar essa variavel diferente, para gerenciar a densidade de modo que consiga fazer essa comparação.
             break;
         case 6:
             resultado2 = pib_per_capita2;
@@ -372,7 +375,7 @@ int main() {
 
         }
 
-
+            // resultado
             printf("Ótimo, vamos ver quais atributos ganharam!\n");
             printf("O placar será assim! 1:0 = você venceu, 0:1 = Você perdeu, 1:1 = Empate!\n ");
             printf("-------------------------------------------------\n");
