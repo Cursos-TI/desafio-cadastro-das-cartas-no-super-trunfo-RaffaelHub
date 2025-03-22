@@ -374,38 +374,50 @@ int main() {
 
 
             printf("Ótimo, vamos ver quais atributos ganharam!\n");
+            printf("O placar será assim! 1:0 = você venceu, 0:1 = Você perdeu, 1:1 = Empate!\n ");
+            printf("-------------------------------------------------\n");
 
             if ((atributo1 != 5 && atributo2 != 5) && (resultado1 == resultado2)) {
                 printf("Empate! (1:1)\n");
+                printf("-------------------------------------------------\n");
             }
             else if ((atributo1 != 5 && atributo2 != 5) && (resultado1 != resultado2)) {
                 if (resultado1 > resultado2) {
                     printf("Você venceu! (1:0)\n");
+                    printf("-------------------------------------------------\n");
                 } else {
                     printf("Você perdeu! (0:1)\n");
+                    printf("-------------------------------------------------\n");
                 }
             } 
             else if (atributo1 == 5 && atributo2 == 5) { // Comparação de Densidade Populacional
                 if (atributo1d == atributo2d) {
                     printf("Empate na Densidade Populacional! (1:1)\n");
+                    printf("-------------------------------------------------\n");
                 } else if (atributo1d < atributo2d) { // Menor valor vence
                     printf("Você venceu! (1:0)\n");
+                    printf("-------------------------------------------------\n");
                 } else {
                     printf("Você perdeu! (0:1)\n");
+                    printf("-------------------------------------------------\n");
                 }
             } 
             else if (atributo1 == 5 || atributo2 == 5) { // Caso um atributo seja Densidade Populacional
                 if (atributo1 == 5) { // Atributo 1 é Densidade Populacional
                     if (atributo1d < resultado2) { // Menor valor vence
                         printf("Você venceu! (1:0)\n");
+                        printf("-------------------------------------------------\n");
                     } else {
                         printf("Você perdeu! (0:1)\n");
+                        printf("-------------------------------------------------\n");
                     }
                 } else { // Atributo 2 é Densidade Populacional
                     if (resultado1 < atributo2d) { // Menor valor vence
                         printf("Você venceu! (1:0)\n");
+                        printf("-------------------------------------------------\n");
                     } else {
                         printf("Você perdeu! (0:1)\n");
+                        printf("-------------------------------------------------\n");
                     }
                 }
             }
@@ -421,8 +433,9 @@ int main() {
         break;
 
 
-    
+    case 2:
         printf("A jogabilidade é simples! No terminal, o jogo irá solicitar que você insira os dados dos atributos para cada carta. Após inserir os dados, a comparação será realizada entre os atributos escolhidos, e o vencedor será determinado com base nessa comparação.\n");
+        printf("-------------------------------------------------\n");
         break;
     case 3:
         printf("Você terá duas opções de comparação para jogar:\n");
@@ -434,6 +447,7 @@ int main() {
         printf("1. **Vitória (Você venceu!)**: Isso acontece quando ambos os atributos comparados têm o mesmo valor, e esse valor é maior que zero.\n");
         printf("2. **Empate**: Se os atributos comparados forem diferentes, o jogo considera empate.\n");
         printf("3. **Derrota (Você perdeu!)**: Se ambos os atributos forem zero, o jogo considera que você perdeu.\n");
+        printf("-------------------------------------------------\n");
         break;
     }
     
